@@ -6,10 +6,41 @@
 : 태그를 사용해서 spring이 class(컴포넌트, 컨트롤러)를 검색할 package를 지정
   태그는 basr-package에서 지정한 package에서 @Component가 적용 된 class를 검색해서 bean으로 자동 등록한다.
   
-  # 따라서, XML 설정 파일이 다양한 bean정보를 추가하지 않더라도 된다.
-  
   - simple maven project
    <context:annotation-config/>
   
-  - servlet-context
+  - MVC servlet-context
    <annotation-driven />
+   
+  # 따라서, XML 설정 파일이 다양한 bean정보를 추가하지 않더라도 된다.
+  
+	@Component("service01")
+	public class AbstractSvcImpl implements AbstractSvc{
+	
+		private String name = "01";
+		
+		@Override
+		public String getClassName() {
+			return "AbstractSvcImpl - " + name;
+		}
+	}
+
+  설정파일에서 <bean> 태그로 작성을 한다면..
+  <bean id="service01" class="com.spring.annotationEx.AbstractSvcImpl" /> 와 같은 방법
+
+	@Component("service02")
+	public class AbstractSvcImpl02 implements AbstractSvc{
+		private String name = "02";
+		
+		@Override
+		public String getClassName() {
+			return "AnstractSvcImpl = " + name;
+		}
+	}
+
+  설정파일에서 <bean> 태그로 작성을 한다면..
+  <bean id="service02" class="com.spring.annotationEx.AbstractSvcImpl02" /> 와 같은 방법
+
+
+[@Resource]
+

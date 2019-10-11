@@ -7,7 +7,7 @@ import org.springframework.stereotype.Component;
 
 /**
  * @CLASS Name
- *  AbstractImpl
+ *  AbstractSvcImpl02
  * 
  * @AUTHOR     : Rony Kwak
  * @CREATE DATE: 2019-10-11
@@ -20,13 +20,12 @@ import org.springframework.stereotype.Component;
  * v1.1: 
  * =============================
  **/
-@Component("service01")
-public class AbstractSvcImpl implements AbstractSvc{
-
-	private String name = "01";
+@Component("service02")
+public class AbstractSvcImpl02 implements AbstractSvc{
+	private String name = "02";
 	
 	@Override
 	public String getClassName() {
-		return "AbstractSvcImpl - " + name;
+		return "AnstractSvcImpl = " + name;
 	}
 }
