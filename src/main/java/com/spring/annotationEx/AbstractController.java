@@ -30,7 +30,7 @@ import org.springframework.web.servlet.ModelAndView;
 @Controller
 public class AbstractController extends org.springframework.web.servlet.mvc.AbstractController{
 	
-	// AbstractController 는 org.springframework.web.servlet.mvc의 최상위 컨트롤러로써
+	// AbstractController 는 org.springframework.web.servlet.mvc의 최상위 컨트롤러로써..
 	//  이런예제에서 많이 사용된다.
 	@Resource(name="service01")
 	private AbstractSvc service;
