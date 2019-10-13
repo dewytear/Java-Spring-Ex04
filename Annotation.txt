@@ -47,9 +47,8 @@
 
 
 [@Resource]
- java6 및 JEE5에 추가
+ java6 및 JEE5에 추가, spring 2.5부터 지원하는 annotation
  application에서 필요한 자원을 자동으로 연결할 때 사용
- spring 2.5부터 지원하는 annotation
  spring에서는 의존하는 bean 객체를 전달할 때 사용
  
  설정파일에서는 <context:annotation-config> 태그를 사용한다.
@@ -57,3 +56,14 @@
  		<bean class="org.springframework.beans.factory.annotation.CommonAnnotationBeanPostProcessor"/>
  클래스를 빈으로 등록시켜 사용하는 방법이 있다.
 
+
+[@Autowired]
+ - 의존 관계 설정(type 기반)
+ - 생성자, 필드, 메소드에 적용 가능
+ - set 계열의 메소드가 아닌 메소드에도 적용 가능
+ 
+ 
+ 
+ 
+ 
+ 
