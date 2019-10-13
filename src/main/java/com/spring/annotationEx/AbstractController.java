@@ -31,11 +31,11 @@ import org.springframework.web.servlet.ModelAndView;
 public class AbstractController extends org.springframework.web.servlet.mvc.AbstractController{
 	
 	// AbstractController 는 org.springframework.web.servlet.mvc의 최상위 컨트롤러로써..
-	//  이런예제에서 많이 사용된다.
+	// 컨트롤러를 추상화한 것으로 이런예제에서 많이 사용된다.
 	@Resource(name="service01")
 	private AbstractSvc service;
 	
-	// AbstractController의 handleRequestInternal 를 오버라이드 하여 예제로 많이 사용한다.
+	// AbstractController의 handleRequestInternal 를 오버라이드 하여 예제로 사용
 	@Override
 	@RequestMapping("/comp")
 	protected ModelAndView handleRequestInternal(HttpServletRequest req, HttpServletResponse res) 
